@@ -1,5 +1,5 @@
-const lexipedia = require('../lexipedia.json')
-const isValidWord = require('../isValidWord')
+const lexipedia = require('./lexipedia.json')
+const isValidWord = require('./isValidWord')
 
 // determine which word (based on unique letters) we should guess
 // also consider popularity here, since this doesn't vary that much
