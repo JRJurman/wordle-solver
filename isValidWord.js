@@ -11,6 +11,8 @@ const hasInvalidLetters = (invalidLetters, wordLetters) => {
 const hasRequiredLetters = (requiredLetters, wordLetters) => {
 	// if the set union of both is smaller than the list, then there were common elements
 	// works the same as hasInvalidLetters
+	// slightly different in that we check the difference in the size of the set vs the array
+	// it should be exactly the size of the number of required letters
 	const bothUniqueLetters = [...requiredLetters, ...wordLetters]
 	const setOfLetters = new Set(bothUniqueLetters)
 	return (bothUniqueLetters.length - setOfLetters.size) === requiredLetters.length
